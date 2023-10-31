@@ -40,6 +40,8 @@ This is a short guide to customise the net-snmp agent by adding a few custom OID
 
 ```.1.3.6.1.4.1.8072.9999.9999.2``` for the CPU voltage
 
+We will configure the snmpd.conf file with the "pass" directive. The pass directive tells the snmpd upon request of a specified OID to call a script and return the output of that script to the requester.
+
 ## Temperature
 
 Copy the script ```snmp-cpu-temperature``` from this respository to your ```/usr/local/bin``` directory.
@@ -60,8 +62,6 @@ This will return a number that represents the core temperature in "milli-Celsius
 Copy the script ```snmp-voltage-core``` from this respository to your ```/usr/local/bin``` directory.
 
 The script ```snmp-voltage-core``` script measures the core voltage, it uses vcgencmd command like so:
-
-```/usr/bin/vcgencmd measure_volts core``` This will return the core voltage in Volt like so:
 
 ```console
 pi@raspi-053:~ $ /usr/bin/vcgencmd measure_volts core
