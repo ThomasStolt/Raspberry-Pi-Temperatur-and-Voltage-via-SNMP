@@ -9,6 +9,11 @@ Here is a short guide to customise the net-snmp agent by adding a few custom OID
 
 On a Raspberry Pi you can measure the temperature by using this command:
 
-cat /sys/class/thermal/thermal_zone0/temp
+
+```console
+pi@raspberry-pi:~ $ cat /sys/class/thermal/thermal_zone0/temp
+45764
+```
+
 
 
