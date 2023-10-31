@@ -158,7 +158,7 @@ sudo usermod -aG video Debian-snmp
 
 ---
 
-Do leave a comment if this was helpful for you!!
+Do leave a comment if this was helpful to you!!
 
 :)
 
