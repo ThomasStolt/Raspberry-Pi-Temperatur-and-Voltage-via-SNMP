@@ -15,26 +15,24 @@ and then download and copy both, the ```snmp-cpu-temp``` and the ```snmp-voltage
 Test with:
 
 ```console
-pi@raspberry-pi:~ $ snmpget -v 2c -r 0 -c public <your IP address> .1.3.6.1.4.1.8072.9999.9999.1
+snmpget -v 2c -r 0 -c public <your IP address> .1.3.6.1.4.1.8072.9999.9999.1
+snmpget -v 2c -r 0 -c public <your IP address> .1.3.6.1.4.1.8072.9999.9999.2
+```
+
+Expected responses:
+
+```
 iso.3.6.1.4.1.8072.9999.9999.1 = Gauge32: 55306
-pi@raspberry-pi:~ $ snmpget -v 2c -r 0 -c public <your IP address> .1.3.6.1.4.1.8072.9999.9999.2
 iso.3.6.1.4.1.8072.9999.9999.2 = Gauge32: 1200
 ```
 
-The result should look like this:
-
-```console
-pi@raspberry-pi:~ $ snmpget -v 2c -r 0 -c public <your IP address> .1.3.6.1.4.1.8072.9999.9999.1
-iso.3.6.1.4.1.8072.9999.9999.1 = Gauge32: 45764
-pi@raspberry-pi:~ $ snmpget -v 2c -r 0 -c public <your IP address> .1.3.6.1.4.1.8072.9999.9999.2
-iso.3.6.1.4.1.8072.9999.9999.2 = Gauge32: 926
-```
+respectively.
 
 # Guide
 
 ## Purpose of this Guide
 
-This is a short guide to customise the net-snmp agent by adding a few custom OIDs that can then be polled by standard SNMP tools (such as telegraf or mrtg). The custom OIDs that I have picked are:
+This is a short guide on how to customise the net-snmp agent on a Raspberry Pi by adding two custom OIDs that can then be polled by standard SNMP tools (such as telegraf or mrtg). The custom OIDs that I have picked are:
 
 ```.1.3.6.1.4.1.8072.9999.9999.1``` for the CPU temperature and
 
