@@ -10,7 +10,10 @@ pass  .1.3.6.1.4.1.8072.9999.9999.2  /usr/bin/sh /usr/local/bin/snmp-voltage-cor
 sudo systemctl restart snmpd
 sudo usermod -aG video Debian-snmp
 ```
-and then download and copy both, the ```snmp-cpu-temp``` and the ```snmp-voltage-core``` script to ```/usr/local/bin```.
+and then download and copy both, the [```snmp-cpu-temp```](https://github.com/ThomasStolt/Raspberry-Pi-Temperatur-and-Voltage-via-SNMP/blob/main/snmp-cpu-temp)
+
+
+and the ```snmp-voltage-core``` script to ```/usr/local/bin```.
 
 Test with:
 
